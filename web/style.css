@@ -13,9 +13,16 @@ body {
 }
 
 #tajmahal {
-    width: 600px;
+    width: 800px;
 }
 
 #youtube{
     display: none;
+}
+
+.topcolor{
+    background: #aeb0b5;
+    color: #fff;
+    padding: 1em 0;
+    margin: 0;
 }
