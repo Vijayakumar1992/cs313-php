@@ -46,7 +46,9 @@ buildings in the world, it is one of India's biggest tourist attractions.
 </pre>
 
 
-<?php require 'date.php';?>
+<?php
+echo "Today is " . date("m.d.Y") . "<br>";
+?>
 
 </body>
 
