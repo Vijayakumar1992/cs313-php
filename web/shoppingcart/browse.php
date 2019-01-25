@@ -22,9 +22,30 @@ if(!isset($_SESSION['cart'])) {
 
 if(isset($_POST["jerseyjames"])){
     $_SESSION["jerseyjames"] = true;
+
 }
-echo $_POST["jerseyjames"];
-echo $_POST["jerseydurant"];
+
+if(isset($_POST["jerseydurant"])){
+    $_SESSION["jerseydurant"] = true;
+    
+}
+
+if(isset($_POST["jerseykobe"])){
+    $_SESSION["jerseykobe"] = true;
+    
+}
+if(isset($_POST["jerseynash"])){
+    $_SESSION["jerseynash"] = true;
+    
+}
+if(isset($_POST["jerseywade"])){
+    $_SESSION["jerseywade"] = true;
+    
+}
+if(isset($_POST["jerseywestbrook"])){
+    $_SESSION["jerseywestbrook"] = true;
+    
+}
 ?>
 <body>
     <!-- <button id="cartbutton" type="button" onclick="alert('adding to cart!')">Add to Cart</button> -->
@@ -39,7 +60,7 @@ echo $_POST["jerseydurant"];
         <button class="cartbutton" type="button" onclick="addToCart('kdjersey', 89)">Add to Cart</button>
         <button class="cartbutton" type="button" onclick="addToCart('kobebryant', 79)">Add to Cart</button> -->
 
-
+    <!-- </div> -->
         <img src="jamesjersey.JPG" width="500px" alt="LeBron James Jersey">
         <form action="#" method="post">
             <input type="text" hidden name ="jerseyjames" value ="james">
@@ -52,7 +73,33 @@ echo $_POST["jerseydurant"];
             <input type="text" hidden name ="jerseydurant" value ="durant">
             <input type="submit" value = "add to card">
         </form>
-    <!-- </div> -->
+
+        <img src="kobebryant.png" width="500px" alt="kobe Bryant Jersey">
+        <form action="#" method="post">
+            <input type="text" hidden name ="jerseykobe" value ="kobe">
+            <input type="submit" value = "add to card">
+        </form>
+
+        <img src="nashjersey.jpg" width="500px" alt="steve nash Jersey">
+        <form action="#" method="post">
+            <input type="text" hidden name ="jerseynash" value ="nash">
+            <input type="submit" value = "add to card">
+        </form>
+
+        <img src="wadejersey.jpg" width="500px" alt="wade  Jersey">
+        <form action="#" method="post">
+            <input type="text" hidden name ="jerseywade" value ="wade">
+            <input type="submit" value = "add to card">
+        </form>
+
+
+        <img src="westbrookjersey.png" width="500px" alt="westbrook Jersey">
+        <form action="#" method="post">
+            <input type="text" hidden name ="jerseywestbrook" value ="westbrook">
+            <input type="submit" value = "add to card">
+        </form>
+
+    
 
     <!-- <div class="container">
         <img src="nashjersey.jpg" width="500px" alt="Steve Nash Jersey">
