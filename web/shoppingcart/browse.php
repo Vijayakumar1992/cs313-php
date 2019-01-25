@@ -19,7 +19,12 @@ if(!isset($_SESSION['cart'])) {
 </head>
 
 <?php 
-echo $_POST["jersey"];
+
+if(isset($_POST["jerseyjames"])){
+    $_SESSION["jerseyjames"] = true;
+}
+echo $_POST["jerseyjames"];
+echo $_POST["jerseydurant"];
 ?>
 <body>
     <!-- <button id="cartbutton" type="button" onclick="alert('adding to cart!')">Add to Cart</button> -->
@@ -37,7 +42,14 @@ echo $_POST["jersey"];
 
         <img src="jamesjersey.JPG" width="500px" alt="LeBron James Jersey">
         <form action="#" method="post">
-            <input type="text" hidden name ="jersey" value ="james">
+            <input type="text" hidden name ="jerseyjames" value ="james">
+            <input type="submit" value = "add to card">
+        </form>
+
+
+        <img src="kdjersey.png" width="500px" alt="Kevin Durant Jersey">
+        <form action="#" method="post">
+            <input type="text" hidden name ="jerseydurant" value ="durant">
             <input type="submit" value = "add to card">
         </form>
     <!-- </div> -->
