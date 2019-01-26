@@ -99,7 +99,7 @@ if(isset($_POST["jerseywestbrook"])){
             <input type="submit" value = "add to card">
         </form>
 
-    
+        <a href="url">shopping cart</a>
 
     <!-- <div class="container">
         <img src="nashjersey.jpg" width="500px" alt="Steve Nash Jersey">

@@ -1,7 +1,4 @@
-<h1> Ites in the cart </h1>
-
-
-
+<h1> Items in the cart </h1>
 
 
 <?php
