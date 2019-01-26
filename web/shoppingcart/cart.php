@@ -2,7 +2,6 @@
 
 
 <?php
-
 session_start();
 if(isset( $_SESSION["jerseyjames"])) {
     echo "<h1>jersey james printed</h1><br>";
