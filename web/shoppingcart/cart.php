@@ -4,11 +4,11 @@
 <?php
 session_start();
 
-// removes jerseys from the cart
-// $removeitem = $_POST["remove"];
-// if(removeitem = "jerseyjames"){
-//     $_SESSION ["jerseyjames"] = false;
-// }
+removes jerseys from the cart
+$removeitem = $_POST["remove"];
+if(removeitem = "jerseyjames"){
+    $_SESSION ["jerseyjames"] = false;
+}
 
 if(isset( $_SESSION["jerseyjames"])) {
     echo "<h1>jersey james printed</h1><br>";
