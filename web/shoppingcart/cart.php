@@ -61,6 +61,25 @@ if(isset( $_SESSION["jerseywestbrook"])) {
      <input type="submit" value="REMOVE">
 </form>
 
+<form action="cart.php?remove=jerseydurant">  
+     <input type="submit" value="REMOVE">
+</form>
+
+<form action="cart.php?remove=jerseykobe">  
+     <input type="submit" value="REMOVE">
+</form>
+
+<form action="cart.php?remove=jerseynash">  
+     <input type="submit" value="REMOVE">
+</form>
+
+<form action="cart.php?remove=jerseywade">  
+     <input type="submit" value="REMOVE">
+</form>
+
+<form action="cart.php?remove=jerseywestbrook">  
+     <input type="submit" value="REMOVE">
+</form>
 
 </body>
 </html>
