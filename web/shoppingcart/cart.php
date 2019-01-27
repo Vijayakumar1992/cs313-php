@@ -4,9 +4,10 @@
 <?php
 session_start();
 
+//removes jerseys from the cart
 $removeitem = $_POST["remove"];
 if(removeitem = "jerseyjames"){
-    $_SESSION ['jerseyjames'] = false;
+    $_SESSION ["jerseyjames"] = false;
 }
 
 if(isset( $_SESSION["jerseyjames"])) {
