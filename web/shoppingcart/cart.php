@@ -1,20 +1,8 @@
+
 <h1> Items in the cart </h1>
 
 <?php
 session_start();
-// //removes jerseys from the cart
-$removeitem = $_POST["remove"];
-if(removeitem = "jerseyjames"){
-    $_SESSION ["jerseyjames"] = false;
-}
-
-
-?>
-
-<?php
-session_start();
-
-
 // //removes jerseys from the cart
 // $removeitem = $_POST["remove"];
 // if(removeitem = "jerseyjames"){
@@ -67,8 +55,10 @@ if(isset( $_SESSION["jerseywestbrook"])) {
 
 <body>
 
+
+
 <form action="cart.php?remove=jerseyjames">  
-     <input type="submit" value="Submit">
+     <input type="submit" value="REMOVE">
 </form>
 
 
