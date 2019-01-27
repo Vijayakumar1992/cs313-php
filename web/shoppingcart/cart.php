@@ -78,7 +78,7 @@ if(isset( $_SESSION["jerseywestbrook"])) {
 
 <form action="cart.php?remove=jerseywestbrook">  
      <input type="submit" value="REMOVE">
-</form> --> -->
+</form> -->
 
 </body>
 </html>
