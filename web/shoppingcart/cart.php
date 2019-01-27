@@ -14,9 +14,9 @@ session_start();
 if(isset( $_SESSION["jerseyjames"])) {
     echo "<h1>jersey james printed</h1><br>";
 
-    <form action="cart.php?remove=jerseyjames">  
-    <input type="submit" value="REMOVE">
-    </form>
+    // <form action="cart.php?remove=jerseyjames">  
+    // <input type="submit" value="REMOVE">
+    // </form>
 }
 
 if(isset( $_SESSION["jerseydurant"])) {
@@ -56,12 +56,11 @@ if(isset( $_SESSION["jerseywestbrook"])) {
 <body>
 
 
-
-<!-- <form action="cart.php?remove=jerseyjames">  
+<form action="cart.php?remove=jerseyjames">  
      <input type="submit" value="REMOVE">
-</form>
+</form> 
 
-<form action="cart.php?remove=jerseydurant">  
+<!-- <form action="cart.php?remove=jerseydurant">  
      <input type="submit" value="REMOVE">
 </form>
 
@@ -79,7 +78,7 @@ if(isset( $_SESSION["jerseywestbrook"])) {
 
 <form action="cart.php?remove=jerseywestbrook">  
      <input type="submit" value="REMOVE">
-</form> -->
+</form> --> -->
 
 </body>
 </html>
