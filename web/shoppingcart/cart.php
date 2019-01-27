@@ -5,17 +5,17 @@
 session_start();
 
 //removes jerseys from the cart
-$removeitem = $_POST["remove"];
-if(removeitem = "jerseyjames"){
-    $_SESSION ["jerseyjames"] = false;
-}
+// $removeitem = $_POST["remove"];
+// if(removeitem = "jerseyjames"){
+//     $_SESSION ["jerseyjames"] = false;
+// }
 
 if(isset( $_SESSION["jerseyjames"])) {
     echo "<h1>jersey james printed</h1><br>";
 
-    <form action="cart.php?remove=jerseyjames">  
-    <input type="submit" value="Submit">
-    </form>
+    // <form action="cart.php?remove=jerseyjames">  
+    // <input type="submit" value="Submit">
+    // </form>
 }
 
 if(isset( $_SESSION["jerseydurant"])) {
