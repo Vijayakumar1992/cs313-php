@@ -20,8 +20,13 @@ catch (PDOException $ex)
   echo 'Error!: ' . $ex->getMessage();
   die();
 }
+// this would grab the first name from contact 
+$FirstName = $_GET['firstname']; 
+$LastName = $_GET['lastname'];
+$PhoneNumber = $_GET['phonenumber'];
+$Email = $_GET['Email'];
 
-foreach ($db->query('SELECT * FROM customer') as $row)
+foreach ($db->query('SELECT * FROM customer WHERE customer_firstname = $FirstName') as $row)
 {
   echo 'user: ' . $row['customer_firstname'];
   echo ' customer phonenumber: ' . $row['customer_phonenumber'];
