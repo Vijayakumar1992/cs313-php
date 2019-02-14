@@ -29,10 +29,7 @@ $registerdate = $_GET['registerdate'];
 
 //make sure to correct the where information to make sure it connects to the right name. 
 
-foreach ($db->query("SELECT * FROM customer WHERE customer_firstname = $FirstName") as $row)
-{
-  echo 'user: ' . $row['customer_firstname'];
-  echo ' customer phonenumber: ' . $row['customer_phonenumber'];
-  echo '<br/>';
-}
+$db->query
+("INSERT INTO customer values (default,'$FirstName','$LastName','$PhoneNumber','$Email','$registerdate',NULL)");
+
 ?>
