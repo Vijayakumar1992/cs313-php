@@ -23,7 +23,8 @@ body {
   float: left;
   color: #f2f2f2;
   text-align: center;
-  padding: 25px 40px; /*shrink the nav bar */
+  padding: 25px 40px;
+  /*shrink the nav bar */
   text-decoration: none;
   font-size: 17px;
   font-weight: bold;
@@ -42,4 +43,33 @@ body {
   display: flex;
   justify-content: center;
   width: 70%;
+}
+
+
+/* This CSS is for contact us file*/
+form {
+  text-align: center;
+  padding: 50px;
+  display: inline-block;
+  width: 250px;
+}
+
+input {
+  width: 100%;
+}
+/* This will center all the pages including photos */
+body {
+  /* text-align: right; ---this will move the form based on our */
+  text-align: center; /* this will move the form based on our */
+}
+#submit {
+  width: 90px;
+  margin: auto;
+}
+
+/* This CSS is for About us file*/
+
+.aboutpage{
+
+  background-color: lightblue;
 }

@@ -63,6 +63,3 @@ INSERT INTO appointment VALUES
 (DEFAULT,'12-28-2019', '125 Walter Street #2121 Provo, Utah 84604' ,3 , 3);
 
 
-
---insert into customer (customer_firstname, customer_lastname...)
---values ('john', 'smith')

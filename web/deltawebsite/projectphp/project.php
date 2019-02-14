@@ -25,6 +25,9 @@ $FirstName = $_GET['firstname'];
 $LastName = $_GET['lastname'];
 $PhoneNumber = $_GET['phonenumber'];
 $Email = $_GET['Email'];
+$registerdate = $_GET['Date'];
+
+//make sure to correct the where information to make sure it connects to the right name. 
 
 foreach ($db->query('SELECT * FROM customer WHERE customer_firstname = $FirstName') as $row)
 {
