@@ -41,10 +41,10 @@ if (isset($FirstName)){
   $statement->bindValue(':Email', $Email, PDO::PARAM_STR);
   $statement->bindValue(':registerdate', $registerdate, PDO::PARAM_STR);
 
-  $Statement->execute();
+  $statement->execute();
   $statement->closeCursor();// closes the interaction with the database
   
-  
+
 //   $db->query
 // ("INSERT INTO customer values (default,'$FirstName','$LastName','$PhoneNumber','$Email','$registerdate',NULL)");
 }
