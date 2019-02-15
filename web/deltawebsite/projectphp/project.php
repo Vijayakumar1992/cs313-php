@@ -51,12 +51,15 @@ if (isset($FirstName)){
 
 
 // GETS ALL DATA FROM CUSTOMER TABLE 
-$resultSet = $db->query("SELECT * FROM CUSTOMER WHERE customer_email = '$Email'");
+// $resultSet = $db->query("SELECT * FROM CUSTOMER WHERE customer_email = '$Email'");
+$sql = 'SELECT * FROM CUSTOMER WHERE customer_email = :Email';
+$statement = $db->prepare($sql);
+$statement->bindValue(':Email', $Email, PDO::PARAM_STR);
+$statement->execute();
+$resultSet = $statement->fetch(); // get the first result of the query above
+$statement->closeCursor();// closes the interaction with the database
 //this would get the result from each column and displays it as rows 
-foreach ($resultSet as $row) 
-{
-  echo $row["customer_id"] .$row["customer_firstname"].$row["customer_lastname"].$row["customer_email"];
-}
+echo $resultSet["customer_id"] .$resultSet["customer_firstname"].$resultSet["customer_lastname"].$resultSet["customer_email"];
 
 
 ?>
