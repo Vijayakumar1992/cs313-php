@@ -26,10 +26,9 @@ $FirstName = $_GET['firstname'];
 $LastName = $_GET['lastname'];
 $PhoneNumber = $_GET['phonenumber'];
 $Email = $_GET['email'];
-echo $Email;
-exit;
 $registerdate = $_GET['registerdate'];
 } 
+
 catch(Exception $ex){
   echo 'Error!: ' . $ex->getMessage();
   die();
@@ -65,8 +64,6 @@ $statement->execute();
 $resultSet = $statement->fetch(); // get the first result of the query above
 $statement->closeCursor();// closes the interaction with the database
 //this would get the result from each column and displays it as rows 
-var_dump($resultSet); // takes all the info in array and dumps it out into the page
-exit;
 echo $resultSet["customer_id"] .$resultSet["customer_firstname"].$resultSet["customer_lastname"].$resultSet["customer_email"];
 
 
