@@ -17,7 +17,7 @@ CREATE TABLE customer(
     customer_firstname           varchar(100) NOT NULL,   -- need to preset the maximum amount of character 
     customer_lastname            varchar(100) NOT NULL,
     customer_phonenumber         VARCHAR NOT NULL, 
-    customer_email               varchar(100) NOT NULL,
+    customer_email               varchar(100) NOT NULL UNIQUE,
     customer_registerdate        date NOT NULL,          -- just gets the date LOOK UP HOW TO UPDATE A SINGLE TABLE 
     customer_gender              varchar(5)
 );
