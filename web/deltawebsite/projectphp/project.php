@@ -31,8 +31,22 @@ $registerdate = $_GET['registerdate'];
 
 // performs the action based on the code in db server
 if (isset($FirstName)){
-  $db->query
-("INSERT INTO customer values (default,'$FirstName','$LastName','$PhoneNumber','$Email','$registerdate',NULL)");
+
+  $sql = 'INSERT INTO customer values (default, :FirstName, :LastName, :PhoneNumber, :Email, :registerdate, NULL)';
+  $statement = $db->prepare($sql);
+
+  $statement->bindValue(':FirstName', $FirstName, PDO::PARAM_STR);
+  $statement->bindValue(':LastName', $LastName, PDO::PARAM_STR);
+  $statement->bindValue(':PhoneNumber', $PhoneNumber, PDO::PARAM_STR);
+  $statement->bindValue(':Email', $Email, PDO::PARAM_STR);
+  $statement->bindValue(':registerdate', $registerdate, PDO::PARAM_STR);
+
+  $Statement->execute();
+  $statement->closeCursor();// closes the interaction with the database
+  
+  
+//   $db->query
+// ("INSERT INTO customer values (default,'$FirstName','$LastName','$PhoneNumber','$Email','$registerdate',NULL)");
 }
 
 
