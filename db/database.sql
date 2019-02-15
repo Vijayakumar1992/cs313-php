@@ -1,6 +1,6 @@
 -- to view a table -- select * from (name of the table);
 -- to create a table -- copy and paste the table 
--- \i database.sql to drop and create the tables 
+-- \i database.sql to drop and create the tables runs the script 
 -- heroku pg:psql -- connect to heroku database
 -- to view table just type ;
 
