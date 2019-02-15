@@ -20,14 +20,21 @@ catch (PDOException $ex)
   echo 'Error!: ' . $ex->getMessage();
   die();
 }
+try{
 // this would grab the first name from contact 
 $FirstName = $_GET['firstname']; 
 $LastName = $_GET['lastname'];
 $PhoneNumber = $_GET['phonenumber'];
 $Email = $_GET['email'];
-echo $email;
+echo $Email;
 exit;
 $registerdate = $_GET['registerdate'];
+} 
+catch(Exception $ex){
+  echo 'Error!: ' . $ex->getMessage();
+  die();
+}
+
 
 //make sure to correct the where information to make sure it connects to the right name. 
 
