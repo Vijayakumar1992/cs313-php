@@ -25,6 +25,8 @@ $FirstName = $_GET['firstname'];
 $LastName = $_GET['lastname'];
 $PhoneNumber = $_GET['phonenumber'];
 $Email = $_GET['email'];
+echo $email;
+exit;
 $registerdate = $_GET['registerdate'];
 
 //make sure to correct the where information to make sure it connects to the right name. 
