@@ -42,17 +42,14 @@ if (isset($FirstName)){
   $statement->bindValue(':registerdate', $registerdate, PDO::PARAM_STR);
 
   $statement->execute();
-  $statement->closeCursor();// closes the interaction with the database
-  
+  $statement->closeCursor();// closes the interaction with the database  
 
 //   $db->query
 // ("INSERT INTO customer values (default,'$FirstName','$LastName','$PhoneNumber','$Email','$registerdate',NULL)");
 }
-
-
 // GETS ALL DATA FROM CUSTOMER TABLE 
 // $resultSet = $db->query("SELECT * FROM CUSTOMER WHERE customer_email = '$Email'");
-$sql = 'SELECT * FROM CUSTOMER WHERE customer_email = :Email';
+$sql = 'SELECT * FROM customer WHERE customer_email = :Email';
 $statement = $db->prepare($sql);
 $statement->bindValue(':Email', $Email, PDO::PARAM_STR);
 $statement->execute();
