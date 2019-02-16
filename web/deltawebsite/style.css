@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(76, 129, 146);
+  background-color: rgb(76, 129, 146);   
 }
 
 /* This will make the nav bar horizontal */
@@ -15,8 +15,6 @@ body {
 .topnav {
   overflow: hidden;
   background-color: #333;
-  /* display: flex;
-  justify-content: center;   */
 }
 
 .topnav a {
@@ -42,7 +40,15 @@ body {
 .navflex {
   display: flex;
   justify-content: center;
-  width: 70%;
+  width: 90%;
+}
+
+.navflex img{
+  align-self: center;
+}
+
+.navflex a{
+  width: 80px;
 }
 
 
@@ -67,9 +73,20 @@ body {
   margin: auto;
 }
 
+
 /* This CSS is for About us file*/
 
 .aboutpage{
-
   background-color: lightblue;
+}
+
+
+
+
+
+/* This CSSis for Photo page */
+
+.backgroundimage{
+  /* background-image: url("/images/wallimage.jpeg");  if you wanna use an image just save&paste the path here*/
+  background-color: #cccccc;
 }
