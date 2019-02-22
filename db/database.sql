@@ -19,7 +19,7 @@ CREATE TABLE customer(
     customer_phonenumber         VARCHAR NOT NULL, 
     customer_email               varchar(100) NOT NULL UNIQUE,
     customer_registerdate        date NOT NULL,          -- just gets the date LOOK UP HOW TO UPDATE A SINGLE TABLE 
-    customer_gender              varchar(5)
+    customer_password            varchar(255)
 );
 
 CREATE TYPE homesize AS ENUM ('small', 'medium', 'large');
