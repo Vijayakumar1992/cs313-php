@@ -73,6 +73,12 @@ body {
   margin: auto;
 }
 
+/* This will make sure allow user to reset the password */
+#reset{
+  width: 120px;
+  margin: auto;
+}
+
 
 /* This CSS is for About us file*/
 
