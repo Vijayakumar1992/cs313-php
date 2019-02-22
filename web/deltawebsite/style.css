@@ -96,3 +96,17 @@ body {
   /* background-image: url("/images/wallimage.jpeg");  if you wanna use an image just save&paste the path here*/
   background-color: #cccccc;
 }
+
+
+
+
+/* This section of css is for login tab */
+
+.loginnav {
+  overflow: hidden;
+  background-color: #333;
+  color: white;
+  margin-top: 0;
+  padding: 1em;
+}
+
