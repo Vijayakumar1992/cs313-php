@@ -104,9 +104,36 @@ body {
 
 .loginnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: black;
   color: white;
   margin-top: 0;
-  padding: 1em;
+  padding: .5em;
+}
+
+
+/* .lnr-envelope:before {
+  content: "\e818";
+}
+.lnr {
+  font-family: Linearicons-Free;
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+} */
+
+.txt1 {
+  font-family: Poppins-Regular;
+  font-size: 18px;
+  line-height: 1.2;
+  color: black;
+}
+
+#homelogo{
+  color: black;
 }
 
