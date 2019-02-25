@@ -19,8 +19,8 @@
         <!-- <img src="/images/backgroundpic.jpeg" alt="Wall Picture" width="500" height="600"> -->
     <h1>
             <?php   
-            echo "Full Name: ". $resultSet["customer_firstname"]." ". $resultSet["customer_lastname"]. "/n";
-            echo "Email: ".$resultSet["customer_email"]. "/n";
+            echo "Full Name: ". $resultSet["customer_firstname"]." ". $resultSet["customer_lastname"]."<br>";
+            echo "Email: ".$resultSet["customer_email"]."<br>";
             echo "Service Date: ".$resultSet["customer_registerdate"];
 
             
