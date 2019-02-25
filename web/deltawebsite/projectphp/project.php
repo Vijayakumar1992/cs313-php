@@ -31,7 +31,7 @@ $LastName = $_GET['lastname'];
 $PhoneNumber = $_GET['phonenumber'];
 $Email = $_GET['email'];
 $registerdate = $_GET['registerdate'];
-$collectpassword = $_GET['password'];
+$collectpassword = $_GET['Password'];
 } 
 
 catch(Exception $ex){
