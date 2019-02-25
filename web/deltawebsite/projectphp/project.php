@@ -81,8 +81,9 @@ else
   if($hashCheck){
    
   //this would get the result from each column and displays it as rows 
-  echo $resultSet["customer_id"] .$resultSet["customer_firstname"].$resultSet["customer_lastname"]
-  .$resultSet["customer_email"].$resultSet["customer_password"];
+  include "profile.php"; // get all code and put it under
+  //  $resultSet["customer_id"] .$resultSet["customer_firstname"].$resultSet["customer_lastname"]
+  // .$resultSet["customer_email"].$resultSet["customer_password"];
   } 
   
 }
