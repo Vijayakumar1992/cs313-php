@@ -46,13 +46,9 @@ echo "Before the if statement\n";
 if (isset($FirstName))
 {
 
-  echo "first name is set\n";
-echo $collectpassword;
 // creates new password and hides the actuall password. 
 $collectpassword2 = password_hash($collectpassword, PASSWORD_DEFAULT);
 
-echo $collectpassword2;
-exit;
 
   //Following code displays the data based on 1st table & the order
   $sql = 'INSERT INTO customer values (default, :FirstName, :LastName, :PhoneNumber, :Email, :registerdate, Null, :collectpassword)'; // place holders
