@@ -71,7 +71,7 @@ exit;
 }
 else
 {
-  echo "in the else statement\n";
+  
   $sql = 'SELECT * FROM customer WHERE customer_email = :Email'; // gathers user data
   $statement = $db->prepare($sql);
   $statement->bindValue(':Email', $Email, PDO::PARAM_STR);
@@ -80,12 +80,12 @@ else
   $statement->closeCursor();// closes the interaction with the database
 
   //takes clear text and compares it with hash in database - password/hashpassword will be compared
-  $hashCheck = password_verify($collectpassword, $resultSet['customer_password']; 
-  echo "hashcheck:$haskCheck\n"; 
+  $hashCheck = password_verify($collectpassword, $resultSet['customer_password']); 
+  
   
   // if hashcheck is true and show them the data
   if($hashCheck){
-    echo "in the hashcheck\n";
+   
   //this would get the result from each column and displays it as rows 
   echo $resultSet["customer_id"] .$resultSet["customer_firstname"].$resultSet["customer_lastname"]
   .$resultSet["customer_email"].$resultSet["customer_password"];
