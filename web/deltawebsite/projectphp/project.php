@@ -1,7 +1,7 @@
 <?php
 try
 {
-  // after submitting thr form it comes down here to read the code
+  // after submitting the form it comes down here to read the code
   $dbUrl = getenv('DATABASE_URL');
 
   $dbOpts = parse_url($dbUrl); // associative array
@@ -31,6 +31,7 @@ $LastName = $_GET['lastname'];
 $PhoneNumber = $_GET['phonenumber'];
 $Email = $_GET['email'];
 $registerdate = $_GET['registerdate'];
+$collectpassword = $_GET['password'];
 } 
 
 catch(Exception $ex){
@@ -38,10 +39,23 @@ catch(Exception $ex){
   die();
 }
 
-// performs the action based on the code in db server
-if (isset($FirstName)){
 
-  $sql = 'INSERT INTO customer values (default, :FirstName, :LastName, :PhoneNumber, :Email, :registerdate, NULL)'; // place holders
+echo "Before the if statement\n";
+
+// performs the action based on the code in db server
+if (isset($FirstName))
+{
+
+  echo "first name is set\n";
+echo $collectpassword;
+// creates new password and hides the actuall password. 
+$collectpassword2 = password_hash($collectpassword, PASSWORD_DEFAULT);
+
+echo $collectpassword2;
+exit;
+
+  //Following code displays the data based on 1st table & the order
+  $sql = 'INSERT INTO customer values (default, :FirstName, :LastName, :PhoneNumber, :Email, :registerdate, Null, :collectpassword)'; // place holders
   $statement = $db->prepare($sql); // prepare function give a new object and give it to the variable statement
 
   // bindvalue will replace the placeholder with actual value and firstname is -actual value and PDO... actual data name
@@ -50,18 +64,35 @@ if (isset($FirstName)){
   $statement->bindValue(':PhoneNumber', $PhoneNumber, PDO::PARAM_STR);
   $statement->bindValue(':Email', $Email, PDO::PARAM_STR);
   $statement->bindValue(':registerdate', $registerdate, PDO::PARAM_STR);
+  $statement->bindValue(':collectpassword', $collectpassword, PDO::PARAM_STR);
   $statement->execute(); // execute the statement object 
   $statement->closeCursor();// closes the interaction with the database  
 
 }
-$sql = 'SELECT * FROM customer WHERE customer_email = :Email';
-$statement = $db->prepare($sql);
-$statement->bindValue(':Email', $Email, PDO::PARAM_STR);
-$statement->execute();
-$resultSet = $statement->fetch(); // get the first result of the query above
-$statement->closeCursor();// closes the interaction with the database
-//this would get the result from each column and displays it as rows 
-echo $resultSet["customer_id"] .$resultSet["customer_firstname"].$resultSet["customer_lastname"].$resultSet["customer_email"];
+else
+{
+  echo "in the else statement\n";
+  $sql = 'SELECT * FROM customer WHERE customer_email = :Email'; // gathers user data
+  $statement = $db->prepare($sql);
+  $statement->bindValue(':Email', $Email, PDO::PARAM_STR);
+  $statement->execute();
+  $resultSet = $statement->fetch(); // get the first result of the query above -- associative of array
+  $statement->closeCursor();// closes the interaction with the database
+
+  //takes clear text and compares it with hash in database - password/hashpassword will be compared
+  $hashCheck = password_verify($collectpassword, $resultSet['customer_password']; 
+  echo "hashcheck:$haskCheck\n"; 
+  
+  // if hashcheck is true and show them the data
+  if($hashCheck){
+    echo "in the hashcheck\n";
+  //this would get the result from each column and displays it as rows 
+  echo $resultSet["customer_id"] .$resultSet["customer_firstname"].$resultSet["customer_lastname"]
+  .$resultSet["customer_email"].$resultSet["customer_password"];
+  } 
+  
+}
+
 
 
 ?>
