@@ -78,7 +78,7 @@ else
   //takes clear text and compares it with hash in database - password/hashpassword will be compared
   $hashCheck = password_verify($collectpassword, $resultSet['customer_password']); 
   
-  
+  echo " else statement is working\n";
   // if hashcheck is true and show them the data
   if($hashCheck){
    
