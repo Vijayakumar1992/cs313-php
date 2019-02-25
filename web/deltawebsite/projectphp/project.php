@@ -40,8 +40,6 @@ catch(Exception $ex){
 }
 
 
-echo "Before the if statement\n";
-
 // performs the action based on the code in db server
 if (isset($FirstName))
 {
@@ -78,7 +76,7 @@ else
   //takes clear text and compares it with hash in database - password/hashpassword will be compared
   $hashCheck = password_verify($collectpassword, $resultSet['customer_password']); 
   
-  echo " $collectpassword, $hashCheck, $resultSet[customer_password]\n";
+  
   // if hashcheck is true and show them the data
   if($hashCheck){
    
