@@ -47,7 +47,7 @@ if (isset($FirstName))
 {
 
 // creates new password and hides the actuall password. 
-$collectpassword2 = password_hash($collectpassword, PASSWORD_DEFAULT);
+$collectpassword = password_hash($collectpassword, PASSWORD_DEFAULT);
 
 
   //Following code displays the data based on 1st table & the order
