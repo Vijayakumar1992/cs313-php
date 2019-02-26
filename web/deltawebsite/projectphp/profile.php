@@ -16,6 +16,24 @@
 
 
 <body>
+
+
+<nav>   
+        <div class="topnav">
+            <div class="navflex">
+                <img src="images/deltaprologo.png" alt="Business Logo" height="45" width="auto">               
+                <a href="#Home">Home</a>
+                <a href="aboutus.html">About us</a>
+                <a href="services.html">Service</a>
+                <a href="photos.html">Photos</a>
+                <a href="contactus.html">Contact</a>
+                <a href="login.html">Login</a>
+                <a href="signup.html">Sign Up</a>
+                <!-- I want to include a login in the same signup page and need to work on it -->
+            </div>
+        </div>
+
+    </nav>
         <!-- <img src="/images/backgroundpic.jpeg" alt="Wall Picture" width="500" height="600"> -->
     <h1>
             <?php   
