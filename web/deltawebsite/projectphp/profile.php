@@ -12,9 +12,6 @@
     type-descriibes what the other document is written in / media-helps the brower to find what kind of decives we request to print out -->
 </head>
 
-<!--I have worked with: David Aruldass, Sam, Ethan, Ashley -->
-
-
 <body>
 
 
