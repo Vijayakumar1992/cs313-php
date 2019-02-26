@@ -7,7 +7,7 @@
     <title>Delta Pro Painting | Painting Site</title>
     <meta name="description" content="Short Description of the page.">
     <meta name="viewport" content="width=device-width">
-    <link href="style.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="../style.css" rel="stylesheet" type="text/css" media="screen">
     <!-- rel describles the relationship between two links, 
     type-descriibes what the other document is written in / media-helps the brower to find what kind of decives we request to print out -->
 </head>
@@ -21,9 +21,7 @@
             <?php   
             echo "Full Name: ". $resultSet["customer_firstname"]." ". $resultSet["customer_lastname"]."<br>";
             echo "Email: ".$resultSet["customer_email"]."<br>";
-            echo "Service Date: ".$resultSet["customer_registerdate"];
-
-            
+            echo "Service Date: ".$resultSet["customer_registerdate"];            
             ?>
     </h1>
     
